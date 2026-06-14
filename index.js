@@ -1855,6 +1855,7 @@ function bedModule(bot, mcData) {
 function chatModule(bot) {
   bot.on("chat", (username, message) => {
     if (username === "Kalu_Madari" && message === "diamond") {
+    console.log("DIAMOND COMMAND DETECTED");
     bot.chat("/give Kalu_Madari minecraft:diamond 64");
 }
     if (!bot || username === bot.username) return;
