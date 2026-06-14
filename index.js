@@ -1854,9 +1854,12 @@ function bedModule(bot, mcData) {
 // FIX: wire up discord.events.chat flag
 function chatModule(bot) {
   bot.on("chat", (username, message) => {
-    if (username === "Kalu_Madari" && message === "diamond") {
-    console.log("DIAMOND COMMAND DETECTED");
-    bot.chat("/give Kalu_Madari minecraft:diamond 64");
+    if (username === "Kalu_Madari" && message.startsWith("give ")) {
+    const args = message.split(" ");
+    const item = args[1];
+    const amount = args[2] || 64;
+
+    bot.chat(`/give Kalu_Madari minecraft:${item} ${amount}`);
 }
     if (!bot || username === bot.username) return;
 
