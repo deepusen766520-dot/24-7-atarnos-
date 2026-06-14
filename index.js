@@ -1854,8 +1854,8 @@ function bedModule(bot, mcData) {
 // FIX: wire up discord.events.chat flag
 function chatModule(bot) {
   bot.on("chat", (username, message) => {
-    if (username === "Dileep" && message === "diamond") {
-    bot.chat("/give Dileep minecraft:diamond 64");
+    if (username === "Kalu_madari" && message === "diamond") {
+    bot.chat("/give kalu_madari minecraft:diamond 64");
 }
     if (!bot || username === bot.username) return;
 
